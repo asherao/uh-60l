@@ -161,6 +161,13 @@ join(res.keyCommands, {
 		{down = device_commands.pilotICPToggleVOR, cockpit_device_id = devices.PLT_ICP, value_down = 0.0, name = _('ICP Pilot AUX - OFF'), category = _('ICP')},
 		{down = device_commands.pilotICPToggleADF, cockpit_device_id = devices.PLT_ICP, value_down = 0.0, name = _('ICP Pilot NAV - OFF'), category = _('ICP')},
 		
+		--(by @shagrat)
+		{down = device_commands.pilotICPXmitSelector, cockpit_device_id = devices.PLT_ICP, value_down = 0.0, name = _('Pilot ICP XMIT Selector - ICS'), category = _('ICP')},
+		{down = device_commands.pilotICPXmitSelector, cockpit_device_id = devices.PLT_ICP, value_down = 0.2, name = _('Pilot ICP XMIT Selector 1 FM ARC-201'), category = _('ICP')},
+		{down = device_commands.pilotICPXmitSelector, cockpit_device_id = devices.PLT_ICP, value_down = 0.4, name = _('Pilot ICP XMIT Selector 2 UHF ARC-164'), category = _('ICP')},
+		{down = device_commands.pilotICPXmitSelector, cockpit_device_id = devices.PLT_ICP, value_down = 0.6, name = _('Pilot ICP XMIT Selector 3 VHF ARC-186'), category = _('ICP')},
+		{down = device_commands.pilotICPXmitSelector, cockpit_device_id = devices.PLT_ICP, value_down = 0.8, name = _('Pilot ICP XMIT Selector 4 FM2 Copilot'), category = _('ICP')},
+		{down = device_commands.pilotICPXmitSelector, cockpit_device_id = devices.PLT_ICP, value_down = 1.0, name = _('Pilot ICP XMIT Selector 5 HF ARC-220'), category = _('ICP')},
 		
 		-- Countermeasures
 		{down = device_commands.cmArmSwitch, cockpit_device_id = devices.M130, value_down = 0.0, name = _('Countermeasures Arming Switch - OFF'), category = _('Countermeasures')},
