@@ -5,6 +5,8 @@ dofile(cockpit.."command_defs.lua")
 
 local res = external_profile("Config/Input/Aircrafts/common_keyboard_binding.lua")
 
+	--Baileys UH60L Binds 2022JAN23
+
 join(res.keyCommands,
 {
 	-- AFCS FPS
@@ -56,10 +58,10 @@ join(res.keyCommands,
 	
 	
 	-- Engine Control Levers
-	{down = device_commands.setEng1Control, cockpit_device_id = devices.ECQ, value_down = 1.0, name = _('Engine No. 1 Control Lever - Fly'), category = _('ECQ')},
-	{down = device_commands.setEng1Control, cockpit_device_id = devices.ECQ, value_down = 0.0, name = _('Engine No. 1 Control Lever - Idle'), category = _('ECQ')},
-	{down = device_commands.setEng2Control, cockpit_device_id = devices.ECQ, value_down = 1.0, name = _('Engine No. 2 Control Lever - Fly'), category = _('ECQ')},
-	{down = device_commands.setEng2Control, cockpit_device_id = devices.ECQ, value_down = 0.0, name = _('Engine No. 2 Control Lever - Idle'), category = _('ECQ')},
+	{down = device_commands.setEng1Control, cockpit_device_id = devices.ECQ, value_down = 1.0, name = _('Engine No. 1 Control Lever - FLY'), category = _('ECQ')},
+	{down = device_commands.setEng1Control, cockpit_device_id = devices.ECQ, value_down = 0.0, name = _('Engine No. 1 Control Lever - IDLE'), category = _('ECQ')},
+	{down = device_commands.setEng2Control, cockpit_device_id = devices.ECQ, value_down = 1.0, name = _('Engine No. 2 Control Lever - FLY'), category = _('ECQ')},
+	{down = device_commands.setEng2Control, cockpit_device_id = devices.ECQ, value_down = 0.0, name = _('Engine No. 2 Control Lever - IDLE'), category = _('ECQ')},
 	
 	
 	-- Engine FSS
@@ -90,29 +92,45 @@ join(res.keyCommands,
 	
 	
 	--ASN128B GPS Computer
-	{down = device_commands.SelectBtn1, up = device_commands.SelectBtn1, cockpit_device_id = devices.ASN128B, value_down = 1.0, value_up = 0.0, name = _('ASN 128 - Button 1'), category = _('ASN128B GPS DPLR')},
-	{down = device_commands.SelectBtn2, up = device_commands.SelectBtn2, cockpit_device_id = devices.ASN128B, value_down = 1.0, value_up = 0.0, name = _('ASN 128 - Button 2'), category = _('ASN128B GPS DPLR')},
-	{down = device_commands.SelectBtn3, up = device_commands.SelectBtn3, cockpit_device_id = devices.ASN128B, value_down = 1.0, value_up = 0.0, name = _('ASN 128 - Button 3'), category = _('ASN128B GPS DPLR')},
-	{down = device_commands.SelectBtn4, up = device_commands.SelectBtn4, cockpit_device_id = devices.ASN128B, value_down = 1.0, value_up = 0.0, name = _('ASN 128 - Button 4'), category = _('ASN128B GPS DPLR')},
-	{down = device_commands.SelectBtn5, up = device_commands.SelectBtn5, cockpit_device_id = devices.ASN128B, value_down = 1.0, value_up = 0.0, name = _('ASN 128 - Button 5'), category = _('ASN128B GPS DPLR')},
-	{down = device_commands.SelectBtn6, up = device_commands.SelectBtn6, cockpit_device_id = devices.ASN128B, value_down = 1.0, value_up = 0.0, name = _('ASN 128 - Button 6'), category = _('ASN128B GPS DPLR')},
-	{down = device_commands.SelectBtn7, up = device_commands.SelectBtn7, cockpit_device_id = devices.ASN128B, value_down = 1.0, value_up = 0.0, name = _('ASN 128 - Button 7'), category = _('ASN128B GPS DPLR')},
-	{down = device_commands.SelectBtn8, up = device_commands.SelectBtn8, cockpit_device_id = devices.ASN128B, value_down = 1.0, value_up = 0.0, name = _('ASN 128 - Button 8'), category = _('ASN128B GPS DPLR')},
-	{down = device_commands.SelectBtn9, up = device_commands.SelectBtn9, cockpit_device_id = devices.ASN128B, value_down = 1.0, value_up = 0.0, name = _('ASN 128 - Button 9'), category = _('ASN128B GPS DPLR')},
-	{down = device_commands.SelectBtn0, up = device_commands.SelectBtn0, cockpit_device_id = devices.ASN128B, value_down = 1.0, value_up = 0.0, name = _('ASN 128 - Button 0'), category = _('ASN128B GPS DPLR')},
+	{down = device_commands.SelectBtn1, up = device_commands.SelectBtn1, cockpit_device_id = devices.ASN128B, value_down = 1.0, value_up = 0.0, name = _('AN/ASN-128B Select Button 1'), category = _('AN/ASN-128B GPS DPLR')},
+	{down = device_commands.SelectBtn2, up = device_commands.SelectBtn2, cockpit_device_id = devices.ASN128B, value_down = 1.0, value_up = 0.0, name = _('AN/ASN-128B Select Button 2'), category = _('AN/ASN-128B GPS DPLR')},
+	{down = device_commands.SelectBtn3, up = device_commands.SelectBtn3, cockpit_device_id = devices.ASN128B, value_down = 1.0, value_up = 0.0, name = _('AN/ASN-128B Select Button 3'), category = _('AN/ASN-128B GPS DPLR')},
+	{down = device_commands.SelectBtn4, up = device_commands.SelectBtn4, cockpit_device_id = devices.ASN128B, value_down = 1.0, value_up = 0.0, name = _('AN/ASN-128B Select Button 4'), category = _('AN/ASN-128B GPS DPLR')},
+	{down = device_commands.SelectBtn5, up = device_commands.SelectBtn5, cockpit_device_id = devices.ASN128B, value_down = 1.0, value_up = 0.0, name = _('AN/ASN-128B Select Button 5'), category = _('AN/ASN-128B GPS DPLR')},
+	{down = device_commands.SelectBtn6, up = device_commands.SelectBtn6, cockpit_device_id = devices.ASN128B, value_down = 1.0, value_up = 0.0, name = _('AN/ASN-128B Select Button 6'), category = _('AN/ASN-128B GPS DPLR')},
+	{down = device_commands.SelectBtn7, up = device_commands.SelectBtn7, cockpit_device_id = devices.ASN128B, value_down = 1.0, value_up = 0.0, name = _('AN/ASN-128B Select Button 7'), category = _('AN/ASN-128B GPS DPLR')},
+	{down = device_commands.SelectBtn8, up = device_commands.SelectBtn8, cockpit_device_id = devices.ASN128B, value_down = 1.0, value_up = 0.0, name = _('AN/ASN-128B Select Button 8'), category = _('AN/ASN-128B GPS DPLR')},
+	{down = device_commands.SelectBtn9, up = device_commands.SelectBtn9, cockpit_device_id = devices.ASN128B, value_down = 1.0, value_up = 0.0, name = _('AN/ASN-128B Select Button 9'), category = _('AN/ASN-128B GPS DPLR')},
+	{down = device_commands.SelectBtn0, up = device_commands.SelectBtn0, cockpit_device_id = devices.ASN128B, value_down = 1.0, value_up = 0.0, name = _('AN/ASN-128B Select Button 0'), category = _('AN/ASN-128B GPS DPLR')},
 	
-	{down = device_commands.SelectBtnTgtStr, up = device_commands.SelectBtnTgtStr, cockpit_device_id = devices.ASN128B, value_down = 1.0, value_up = 0.0, name = _('ASN 128 - Button TGT STR'), category = _('ASN128B GPS DPLR')},
-	{down = device_commands.SelectBtnEnt, up = device_commands.SelectBtnEnt, cockpit_device_id = devices.ASN128B, value_down = 1.0, value_up = 0.0, name = _('ASN 128 - Button ENT'), category = _('ASN128B GPS DPLR')},
-	{down = device_commands.SelectBtnClr, up = device_commands.SelectBtnClr, cockpit_device_id = devices.ASN128B, value_down = 1.0, value_up = 0.0, name = _('ASN 128 - Button CLR'), category = _('ASN128B GPS DPLR')},
-	{down = device_commands.SelectBtnDec, up = device_commands.SelectBtnDec, cockpit_device_id = devices.ASN128B, value_down = 1.0, value_up = 0.0, name = _('ASN 128 - Button DEC'), category = _('ASN128B GPS DPLR')},
-	{down = device_commands.SelectBtnInc, up = device_commands.SelectBtnInc, cockpit_device_id = devices.ASN128B, value_down = 1.0, value_up = 0.0, name = _('ASN 128 - Button INC'), category = _('ASN128B GPS DPLR')},
-	{down = device_commands.SelectBtnLtrRight, up = device_commands.SelectBtnLtrRight, cockpit_device_id = devices.ASN128B, value_down = 1.0, value_up = 0.0, name = _('ASN 128 - Button LTR Right'), category = _('ASN128B GPS DPLR')},
-	{down = device_commands.SelectBtnLtrMid, up = device_commands.SelectBtnLtrMid, cockpit_device_id = devices.ASN128B, value_down = 1.0, value_up = 0.0, name = _('ASN 128 - Button LTR MID'), category = _('ASN128B GPS DPLR')},
-	{down = device_commands.SelectBtnLtrLeft, up = device_commands.SelectBtnLtrLeft, cockpit_device_id = devices.ASN128B, value_down = 1.0, value_up = 0.0, name = _('ASN 128 - Button LTR Left'), category = _('ASN128B GPS DPLR')},
-	{down = device_commands.SelectBtnKybd, up = device_commands.SelectBtnKybd, cockpit_device_id = devices.ASN128B, value_down = 1.0, value_up = 0.0, name = _('ASN 128 - Button KYBD'), category = _('ASN128B GPS DPLR')},
-	{down = device_commands.SelectBtnF1, up = device_commands.SelectBtnF1, cockpit_device_id = devices.ASN128B, value_down = 1.0, value_up = 0.0, name = _('ASN 128 - Button F1'), category = _('ASN128B GPS DPLR')},
+	{down = device_commands.SelectBtnTgtStr, up = device_commands.SelectBtnTgtStr, cockpit_device_id = devices.ASN128B, value_down = 1.0, value_up = 0.0, name = _('AN/ASN-128B Select Button TGT STR'), category = _('AN/ASN-128B GPS DPLR')},
+	{down = device_commands.SelectBtnEnt, up = device_commands.SelectBtnEnt, cockpit_device_id = devices.ASN128B, value_down = 1.0, value_up = 0.0, name = _('AN/ASN-128B Select Button ENT'), category = _('AN/ASN-128B GPS DPLR')},
+	{down = device_commands.SelectBtnClr, up = device_commands.SelectBtnClr, cockpit_device_id = devices.ASN128B, value_down = 1.0, value_up = 0.0, name = _('AN/ASN-128B Select Button CLR'), category = _('AN/ASN-128B GPS DPLR')},
+	{down = device_commands.SelectBtnDec, up = device_commands.SelectBtnDec, cockpit_device_id = devices.ASN128B, value_down = 1.0, value_up = 0.0, name = _('AN/ASN-128B Select Button DEC'), category = _('AN/ASN-128B GPS DPLR')},
+	{down = device_commands.SelectBtnInc, up = device_commands.SelectBtnInc, cockpit_device_id = devices.ASN128B, value_down = 1.0, value_up = 0.0, name = _('AN/ASN-128B Select Button INC'), category = _('AN/ASN-128B GPS DPLR')},
+	{down = device_commands.SelectBtnLtrRight, up = device_commands.SelectBtnLtrRight, cockpit_device_id = devices.ASN128B, value_down = 1.0, value_up = 0.0, name = _('AN/ASN-128B Select Button LTR Right'), category = _('AN/ASN-128B GPS DPLR')},
+	{down = device_commands.SelectBtnLtrMid, up = device_commands.SelectBtnLtrMid, cockpit_device_id = devices.ASN128B, value_down = 1.0, value_up = 0.0, name = _('AN/ASN-128B Select Button LTR MID'), category = _('AN/ASN-128B GPS DPLR')},
+	{down = device_commands.SelectBtnLtrLeft, up = device_commands.SelectBtnLtrLeft, cockpit_device_id = devices.ASN128B, value_down = 1.0, value_up = 0.0, name = _('AN/ASN-128B Select Button LTR Left'), category = _('AN/ASN-128B GPS DPLR')},
+	{down = device_commands.SelectBtnKybd, up = device_commands.SelectBtnKybd, cockpit_device_id = devices.ASN128B, value_down = 1.0, value_up = 0.0, name = _('AN/ASN-128B Select Button KYBD'), category = _('AN/ASN-128B GPS DPLR')},
+	{down = device_commands.SelectBtnF1, up = device_commands.SelectBtnF1, cockpit_device_id = devices.ASN128B, value_down = 1.0, value_up = 0.0, name = _('AN/ASN-128B Select Button F1'), category = _('AN/ASN-128B GPS DPLR')},
+
 	
-	
+	--AN/ASN-128B Selectors (by shagrat)
+	{down = device_commands.SelectDisplay, cockpit_device_id = devices.ASN128B, value_down = 0.00, name = _('AN/ASN-128B Select Display 1 WIND-UTC DATA'), category = _('AN/ASN-128B GPS DPLR')},
+	{down = device_commands.SelectDisplay, cockpit_device_id = devices.ASN128B, value_down = 0.01, name = _('AN/ASN-128B Select Display 2 XTX/TXC KEY'), category = _('AN/ASN-128B GPS DPLR')},
+	{down = device_commands.SelectDisplay, cockpit_device_id = devices.ASN128B, value_down = 0.02, name = _('AN/ASN-128B Select Display 3 GS/TK NAV M'), category = _('AN/ASN-128B GPS DPLR')},
+	{down = device_commands.SelectDisplay, cockpit_device_id = devices.ASN128B, value_down = 0.03, name = _('AN/ASN-128B Select Display 4 PP'), category = _('AN/ASN-128B GPS DPLR')},
+	{down = device_commands.SelectDisplay, cockpit_device_id = devices.ASN128B, value_down = 0.04, name = _('AN/ASN-128B Select Display 5 DST/BRG TIME'), category = _('AN/ASN-128B GPS DPLR')},
+	{down = device_commands.SelectDisplay, cockpit_device_id = devices.ASN128B, value_down = 0.05, name = _('AN/ASN-128B Select Display 6 WP TGT'), category = _('AN/ASN-128B GPS DPLR')},
+	{down = device_commands.SelectDisplay, cockpit_device_id = devices.ASN128B, value_down = 0.06, name = _('AN/ASN-128B Select Display 7 DATUM ROUTE'), category = _('AN/ASN-128B GPS DPLR')},
+	{down = device_commands.SelectMode, cockpit_device_id = devices.ASN128B, value_down = 0.0, name = _('AN/ASN-128B Select Mode 1 OFF'), category = _('AN/ASN-128B GPS DPLR')},
+	{down = device_commands.SelectMode, cockpit_device_id = devices.ASN128B, value_down = 0.01, name = _('AN/ASN-128B Select Mode 2 LAMP TEST'), category = _('AN/ASN-128B GPS DPLR')},
+	{down = device_commands.SelectMode, cockpit_device_id = devices.ASN128B, value_down = 0.02, name = _('AN/ASN-128B Select Mode 3 TEST'), category = _('AN/ASN-128B GPS DPLR')},
+	{down = device_commands.SelectMode, cockpit_device_id = devices.ASN128B, value_down = 0.03, name = _('AN/ASN-128B Select Mode 4 MGRS'), category = _('AN/ASN-128B GPS DPLR')},
+	{down = device_commands.SelectMode, cockpit_device_id = devices.ASN128B, value_down = 0.04, name = _('AN/ASN-128B Select Mode 5 LAT/LONG'), category = _('AN/ASN-128B GPS DPLR')},
+	{down = device_commands.SelectMode, cockpit_device_id = devices.ASN128B, value_down = 0.05, name = _('AN/ASN-128B Select Mode 6 GPS LDG'), category = _('AN/ASN-128B GPS DPLR')},
+
+
 	-- Pilot ICP Selector
 	{down = device_commands.pilotICPToggleFM1, cockpit_device_id = devices.PLT_ICP, value_down = 1.0, name = _('ICP Pilot FM1 - ON'), category = _('ICP')},
 	{down = device_commands.pilotICPToggleUHF, cockpit_device_id = devices.PLT_ICP, value_down = 1.0, name = _('ICP Pilot UHF - ON'), category = _('ICP')},
@@ -336,7 +354,7 @@ join(res.keyCommands,
 	
 	--{combos = {{key = 'P', reformers = {'RShift'}}}, down = iCommandCockpitShowPilotOnOff, name = _('Show Pilot Body'), category = _('General')},
 	
-    {combos = {{key = 'Enter', reformers = {'RCtrl'}}},			 down = Keys.showControlInd,				name = _('Show controls indicator') ,			 category = _('General')},
+    {combos = {{key = 'Enter', reformers = {'RShift'}}},			 down = Keys.showControlInd,				name = _('Show controls indicator - UH-60L') ,			 category = _('General')},
 	
 	{up = EFM_commands.wheelbrakeToggle,      name = _('Wheel Brakes Toggle On/Off Keyboard')},
 
