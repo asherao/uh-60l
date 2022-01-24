@@ -5,10 +5,21 @@ dofile(cockpit.."command_defs.lua")
 
 local res = external_profile("Config/Input/Aircrafts/common_keyboard_binding.lua")
 
-	--Baileys UH60L Binds 2022JAN23
+	--Baileys UH60L Binds 2022JAN24
 
 join(res.keyCommands,
 {
+
+	--[[Keyboard flight controls won't be available until coded in the module
+	{combos = {{key = 'Up'}},    pressed = iCommandPlaneUpStart    , up = iCommandPlaneUpStop  ,   name = _('Cyclic nose down'), category = _('Ins Cyclic Stick')},
+	{combos = {{key = 'Down'}},  pressed = iCommandPlaneDownStart  , up = iCommandPlaneDownStop,   name = _('Cyclic nose up'), category = _('Ins Cyclic Stick')},
+	{combos = {{key = 'Left'}},  pressed = iCommandPlaneLeftStart  , up = iCommandPlaneLeftStop,   name = _('Cyclic bank left'), category = _('Ins Cyclic Stick')},
+	{combos = {{key = 'Right'}}, pressed = iCommandPlaneRightStart , up = iCommandPlaneRightStop,  name = _('Cyclic bank right'), category = _('Ins Cyclic Stick')},
+	
+	{combos = {{key = 'Z'}}, down = iCommandPlaneLeftRudderStart, up = iCommandPlaneLeftRudderStop, name = _('Rudder left'), category = _('Ins Rudder')},
+	{combos = {{key = 'X'}}, down = iCommandPlaneRightRudderStart, up = iCommandPlaneRightRudderStop, name = _('Rudder right'), category = _('Ins Rudder')},
+	]]
+
 	-- AFCS FPS
 	{down = device_commands.afcsFPS, up = device_commands.afcsFPS, cockpit_device_id = devices.AFCS, value_down = 1.0, value_up = 0.0, name = _('AFCS FPS - ON else OFF'), category = _('AFCS')},
 	{down = device_commands.afcsFPS, up = device_commands.afcsFPS, cockpit_device_id = devices.AFCS, value_down = 0.0, value_up = 1.0, name = _('AFCS FPS - OFF else ON'), category = _('AFCS')},
@@ -290,6 +301,36 @@ join(res.keyCommands,
 	-- Electrical Systems
     {combos = {{key = 'B'}}, down = Keys.BattSwitch, name = _('Battery Switch'), category = _('Electrical Systems')},
 	{combos = {{key = 'B', reformers = {'LCtrl'}}}, down = Keys.ExtPwrSwitch, name = _('External Power Switch'), category = _('Electrical Systems')},
+		
+	{down = EFM_commands.switchAPU, cockpit_device_id = devices.EFM_HELPER, value_down = 1.0, name = _('APU Control Switch - ON'), category = _('Electrical Systems')},
+	{down = EFM_commands.switchAPU, cockpit_device_id = devices.EFM_HELPER, value_down = 0.0, name = _('APU Control Switch - OFF'), category = _('Electrical Systems')},
+
+	{down = EFM_commands.apuGenSwitch2, cockpit_device_id = devices.EFM_HELPER, value_down = 1.0, name = _('APU GEN Switch - ON'), category = _('Electrical Systems')},
+	{down = EFM_commands.apuGenSwitch2, cockpit_device_id = devices.EFM_HELPER, value_down = 0.0, name = _('APU GEN Switch - OFF'), category = _('Electrical Systems')},
+	{down = EFM_commands.apuGenSwitch2, up = EFM_commands.apuGenSwitch2, cockpit_device_id = devices.EFM_HELPER, value_down = 0.0, value_up = 1.0, name = _('APU GEN Switch - OFF else ON'), category = _('Electrical Systems')},
+	{down = EFM_commands.apuGenSwitch2, up = EFM_commands.apuGenSwitch2, cockpit_device_id = devices.EFM_HELPER, value_down = 1.0, value_up = 0.0, name = _('APU GEN Switch - ON else OFF'), category = _('Electrical Systems')},
+	
+	{down = EFM_commands.gen1Switch2, cockpit_device_id = devices.EFM_HELPER, value_down = 1.0, name = _('GEN 1 Switch - ON'), category = _('Electrical Systems')},
+	{down = EFM_commands.gen1Switch2, cockpit_device_id = devices.EFM_HELPER, value_down = 0.0, name = _('GEN 1 Switch - OFF'), category = _('Electrical Systems')},
+	{down = EFM_commands.gen1Switch2, up = EFM_commands.gen1Switch2, cockpit_device_id = devices.EFM_HELPER, value_down = 0.0, value_up = 1.0, name = _('GEN 1 Switch - OFF else ON'), category = _('Electrical Systems')},
+	{down = EFM_commands.gen1Switch2, up = EFM_commands.gen1Switch2, cockpit_device_id = devices.EFM_HELPER, value_down = 1.0, value_up = 0.0, name = _('GEN 1 Switch - ON else OFF'), category = _('Electrical Systems')},
+	
+	{down = EFM_commands.gen2Switch2, cockpit_device_id = devices.EFM_HELPER, value_down = 1.0, name = _('GEN 2 Switch - ON'), category = _('Electrical Systems')},
+	{down = EFM_commands.gen2Switch2, cockpit_device_id = devices.EFM_HELPER, value_down = 0.0, name = _('GEN 2 Switch - OFF'), category = _('Electrical Systems')},
+	{down = EFM_commands.gen2Switch2, up = EFM_commands.gen2Switch2, cockpit_device_id = devices.EFM_HELPER, value_down = 0.0, value_up = 1.0, name = _('GEN 2 Switch - OFF else ON'), category = _('Electrical Systems')},
+	{down = EFM_commands.gen2Switch2, up = EFM_commands.gen2Switch2, cockpit_device_id = devices.EFM_HELPER, value_down = 1.0, value_up = 0.0, name = _('GEN 2 Switch - ON else OFF'), category = _('Electrical Systems')},
+	
+	{down = EFM_commands.extPwrSwitch2, cockpit_device_id = devices.EFM_HELPER, value_down = 1.0, name = _('External Power Switch - ON'), category = _('Electrical Systems')},
+	{down = EFM_commands.extPwrSwitch2, cockpit_device_id = devices.EFM_HELPER, value_down = 0.0, name = _('External Power Switch - OFF'), category = _('Electrical Systems')},
+	{down = EFM_commands.extPwrSwitch2, up = EFM_commands.extPwrSwitch2, cockpit_device_id = devices.EFM_HELPER, value_down = 0.0, value_up = 1.0, name = _('External Power Switch - OFF else ON'), category = _('Electrical Systems')},
+	{down = EFM_commands.extPwrSwitch2, up = EFM_commands.extPwrSwitch2, cockpit_device_id = devices.EFM_HELPER, value_down = 1.0, value_up = 0.0, name = _('External Power Switch - ON else OFF'), category = _('Electrical Systems')},
+
+	-- Instruments
+	{down = device_commands.apn209PilotLoSet, cockpit_device_id = devices.PLTAPN209, value_down = 5.0, name = _('Radar Altimeter Lo Bug Pilot - Increase Slightly'), category = _('Instruments')},
+	{down = device_commands.apn209PilotLoSet, cockpit_device_id = devices.PLTAPN209, value_down = -2.0, name = _('Radar Altimeter Lo Bug Pilot - Decrease Slightly'), category = _('Instruments')},	
+	{down = device_commands.apn209PilotHiSet, cockpit_device_id = devices.PLTAPN209, value_down = 5.0, name = _('Radar Altimeter Hi Bug Pilot - Increase Slightly'), category = _('Instruments')},
+	{down = device_commands.apn209PilotHiSet, cockpit_device_id = devices.PLTAPN209, value_down = -2.0, name = _('Radar Altimeter Hi Bug Pilot - Decrease Slightly'), category = _('Instruments')},
+
 	
 	-- Cyclic
 	{combos = {{key = ';', reformers = {'RCtrl'}}}, pressed = EFM_commands.trimUp, name = _('Cyclic Trim Nose Up'), category = _('Cyclic')},
@@ -343,7 +384,10 @@ join(res.keyCommands,
     {down = Keys.toggleProbe,	 name = _('AAR Probe Extend/Retract'), category = _('General')},
 
 	{down = EFM_commands.wheelbrake, value_down = 1.0, up = EFM_commands.wheelbrake, value_up = 0,  name = _('Wheel Brakes')},
-
+	
+	-- Master Caution Reset TODO
+	{down = device_commands.CAPMasterCautionReset, up = device_commands.CAPMasterCautionReset, cockpit_device_id = devices.CAUTION_ADVISORY_PANEL, value_down = 1.0, value_up = 0.0, name = _('Master Caution Reset'), category = _('General')},
+	
 	-- Input
 	{pressed 	= EFM_commands.collectiveIncrease, 	name = _('Collective Increase'), category = _('Collective')},
 	{pressed 	= EFM_commands.collectiveDecrease, 	name = _('Collective Decrease'), category = _('Collective')},
