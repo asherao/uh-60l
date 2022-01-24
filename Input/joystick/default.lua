@@ -23,36 +23,31 @@ join(res.keyCommands, {
 		{down = device_commands.afcsFPS, up = device_commands.afcsFPS, cockpit_device_id = devices.AFCS, value_down = 0.0, value_up = 1.0, name = _('AFCS FPS - OFF else ON'), category = _('AFCS')},
 		{down = device_commands.afcsFPS, cockpit_device_id = devices.AFCS, value_down = 1.0, name = _('AFCS FPS - ON'), category = _('AFCS')},
 		{down = device_commands.afcsFPS, cockpit_device_id = devices.AFCS, value_down = 0.0, name = _('AFCS FPS - OFF'), category = _('AFCS')},
-		
-		
+			
 		-- AFCS SAS1
 		{down = device_commands.afcsSAS1, up = device_commands.afcsSAS1, cockpit_device_id = devices.AFCS, value_down = 1.0, value_up = 0.0, name = _('AFCS SAS1 - ON else OFF'), category = _('AFCS')},
 		{down = device_commands.afcsSAS1, up = device_commands.afcsSAS1, cockpit_device_id = devices.AFCS, value_down = 0.0, value_up = 1.0, name = _('AFCS SAS1 - OFF else ON'), category = _('AFCS')},
 		{down = device_commands.afcsSAS1, cockpit_device_id = devices.AFCS, value_down = 1.0, name = _('AFCS SAS1 - ON'), category = _('AFCS')},
-		{down = device_commands.afcsSAS1, cockpit_device_id = devices.AFCS, value_down = 0.0, name = _('AFCS SAS1 - OFF'), category = _('AFCS')},
-		
+		{down = device_commands.afcsSAS1, cockpit_device_id = devices.AFCS, value_down = 0.0, name = _('AFCS SAS1 - OFF'), category = _('AFCS')},		
 		
 		-- AFCS SAS2
 		{down = device_commands.afcsSAS2, up = device_commands.afcsSAS2, cockpit_device_id = devices.AFCS, value_down = 1.0, value_up = 0.0, name = _('AFCS SAS2 - ON else OFF'), category = _('AFCS')},
 		{down = device_commands.afcsSAS2, up = device_commands.afcsSAS2, cockpit_device_id = devices.AFCS, value_down = 0.0, value_up = 1.0, name = _('AFCS SAS2 - OFF else ON'), category = _('AFCS')},
 		{down = device_commands.afcsSAS2, cockpit_device_id = devices.AFCS, value_down = 1.0, name = _('AFCS SAS2 - ON'), category = _('AFCS')},
 		{down = device_commands.afcsSAS2, cockpit_device_id = devices.AFCS, value_down = 0.0, name = _('AFCS SAS2 - OFF'), category = _('AFCS')},
-		
-		
+				
 		-- AFCS Boost
 		{down = device_commands.afcsBoost, up = device_commands.afcsBoost, cockpit_device_id = devices.AFCS, value_down = 1.0, value_up = 0.0, name = _('AFCS Boost - ON else OFF'), category = _('AFCS')},
 		{down = device_commands.afcsBoost, up = device_commands.afcsBoost, cockpit_device_id = devices.AFCS, value_down = 0.0, value_up = 1.0, name = _('AFCS Boost - OFF else ON'), category = _('AFCS')},
 		{down = device_commands.afcsBoost, cockpit_device_id = devices.AFCS, value_down = 1.0, name = _('AFCS Boost - ON'), category = _('AFCS')},
-		{down = device_commands.afcsBoost, cockpit_device_id = devices.AFCS, value_down = 0.0, name = _('AFCS Boost - OFF'), category = _('AFCS')},
-		
+		{down = device_commands.afcsBoost, cockpit_device_id = devices.AFCS, value_down = 0.0, name = _('AFCS Boost - OFF'), category = _('AFCS')},		
 		
 		-- AFCS Trim
 		{down = device_commands.afcsTrim, up = device_commands.afcsTrim, cockpit_device_id = devices.AFCS, value_down = 1.0, value_up = 0.0, name = _('AFCS Trim - ON else OFF'), category = _('AFCS')},
 		{down = device_commands.afcsTrim, up = device_commands.afcsTrim, cockpit_device_id = devices.AFCS, value_down = 0.0, value_up = 1.0, name = _('AFCS Trim - OFF else ON'), category = _('AFCS')},
 		{down = device_commands.afcsTrim, cockpit_device_id = devices.AFCS, value_down = 1.0, name = _('AFCS Trim - OFF'), category = _('AFCS')},
 		{down = device_commands.afcsTrim, cockpit_device_id = devices.AFCS, value_down = 0.0, name = _('AFCS Trim - ON'), category = _('AFCS')},
-		
-		
+				
 		-- Slew Stab Fix
 		{down = device_commands.slewStabDown, up = device_commands.slewStabDown, cockpit_device_id = devices.AFCS, value_down = 1.0, value_up = 0.0, name = _('Manual Stabilator Slew Up (Momentary)'), category = _('AFCS')},
 		{down = device_commands.slewStabDown, cockpit_device_id = devices.AFCS, value_down = 1.0, name = _('Manual Stabilator Slew Up'), category = _('AFCS')},
@@ -64,15 +59,13 @@ join(res.keyCommands, {
 		{down = device_commands.afcsStabAuto, up = device_commands.afcsStabAuto, cockpit_device_id = devices.AFCS, value_down = 0.0, value_up = 1.0, name = _('Stabilator Auto - OFF else ON'), category = _('AFCS')},
 		{down = device_commands.afcsStabAuto, cockpit_device_id = devices.AFCS, value_down = 1.0, name = _('Stabilator Auto - ON'), category = _('AFCS')},
 		{down = device_commands.afcsStabAuto, cockpit_device_id = devices.AFCS, value_down = 0.0, name = _('Stabilator Auto - OFF'), category = _('AFCS')},
-		
-		
+				
 		-- Engine Control Levers
 		{down = device_commands.setEng1Control, cockpit_device_id = devices.ECQ, value_down = 1.0, name = _('Engine 1 Power Control Lever - FLY'), category = _('ECQ')},
 		{down = device_commands.setEng1Control, cockpit_device_id = devices.ECQ, value_down = 0.0, name = _('Engine 1 Power Control Lever - IDLE'), category = _('ECQ')},
 		{down = device_commands.setEng2Control, cockpit_device_id = devices.ECQ, value_down = 1.0, name = _('Engine 2 Power Control Lever - FLY'), category = _('ECQ')},
 		{down = device_commands.setEng2Control, cockpit_device_id = devices.ECQ, value_down = 0.0, name = _('Engine 2 Power Control Lever - IDLE'), category = _('ECQ')},
-		
-		
+				
 		-- Engine FSS
 		{down = device_commands.eng1FSS, cockpit_device_id = devices.ECQ, value_down = 0.0, name = _('Engine 1 FSS - OFF'), category = _('ECQ')},
 		{down = device_commands.eng1FSS, cockpit_device_id = devices.ECQ, value_down = 0.5, name = _('Engine 1 FSS - DIR'), category = _('ECQ')},
@@ -80,31 +73,26 @@ join(res.keyCommands, {
 		{down = device_commands.eng2FSS, cockpit_device_id = devices.ECQ, value_down = 0.0, name = _('Engine 2 FSS - OFF'), category = _('ECQ')},
 		{down = device_commands.eng2FSS, cockpit_device_id = devices.ECQ, value_down = 0.5, name = _('Engine 2 FSS - DIR'), category = _('ECQ')},
 		{down = device_commands.eng2FSS, cockpit_device_id = devices.ECQ, value_down = 1.0, name = _('Engine 2 FSS - XFD'), category = _('ECQ')},
-		
-		
+				
 		-- Engine Starter
 		{down = device_commands.eng1Starter, up = device_commands.eng1Starter, cockpit_device_id = devices.ECQ, value_down = 1.0, value_up = 0.0, name = _('Engine 1 Starter'), category = _('ECQ')},
-		{down = device_commands.eng2Starter, up = device_commands.eng2Starter, cockpit_device_id = devices.ECQ, value_down = 1.0, value_up = 0.0, name = _('Engine 2 Starter'), category = _('ECQ')},
-		
+		{down = device_commands.eng2Starter, up = device_commands.eng2Starter, cockpit_device_id = devices.ECQ, value_down = 1.0, value_up = 0.0, name = _('Engine 2 Starter'), category = _('ECQ')},		
 		
 		--ECQ adds a bind for Warthog Throttle-Type IDLE detents (by @shagrat)
         {down = device_commands.eng1ControlDetent, up = device_commands.eng1ControlDetent, cockpit_device_id = devices.ECQ, value_down = -1.0, value_up = 0.0, name = _('Engine 1 Control Lever OFF/IDLE'), category = _('ECQ')},
         {down = device_commands.eng2ControlDetent, up = device_commands.eng2ControlDetent, cockpit_device_id = devices.ECQ, value_down = -1.0, value_up = 0.0, name = _('Engine 2 Control Lever OFF/IDLE'), category = _('ECQ')},
-
 
 		-- Tail Wheel
 		{down = device_commands.miscTailWheelLock, up = device_commands.miscTailWheelLock, cockpit_device_id = devices.MISC, value_down = 1.0, value_up = 0.0, name = _('Tail Wheel Lock - ON else OFF'), category = _('MISC')},
 		{down = device_commands.miscTailWheelLock, up = device_commands.miscTailWheelLock, cockpit_device_id = devices.MISC, value_down = 0.0, value_up = 1.0, name = _('Tail Wheel Lock - OFF else ON'), category = _('MISC')},
 		{down = device_commands.miscTailWheelLock, cockpit_device_id = devices.MISC, value_down = 1.0, name = _('Tail Wheel Lock - ON'), category = _('MISC')},
 		{down = device_commands.miscTailWheelLock, cockpit_device_id = devices.MISC, value_down = 0.0, name = _('Tail Wheel Lock - OFF'), category = _('MISC')},
-		
-		
+				
 		-- VIDS
 		{down = device_commands.cduLampTest, up = device_commands.cduLampTest, cockpit_device_id = devices.VIDS, value_down = 1.0, value_up = 0.0, name = _('CDU Lamp Test'), category = _('VIDS')},
 		{down = device_commands.pilotPDUTest, up = device_commands.pilotPDUTest, cockpit_device_id = devices.VIDS, value_down = 1.0, value_up = 0.0, name = _('PDU Test Pilot'), category = _('VIDS')},
 		{down = device_commands.copilotPDUTest, up = device_commands.copilotPDUTest, cockpit_device_id = devices.VIDS, value_down = 1.0, value_up = 0.0, name = _('PDU Test Copilot'), category = _('VIDS')},
-		
-		
+				
 		--ASN128B GPS Computer
 		{down = device_commands.SelectBtn1, up = device_commands.SelectBtn1, cockpit_device_id = devices.ASN128B, value_down = 1.0, value_up = 0.0, name = _('AN/ASN-128B Select Button 1'), category = _('AN/ASN-128B GPS DPLR')},
 		{down = device_commands.SelectBtn2, up = device_commands.SelectBtn2, cockpit_device_id = devices.ASN128B, value_down = 1.0, value_up = 0.0, name = _('AN/ASN-128B Select Button 2'), category = _('AN/ASN-128B GPS DPLR')},
@@ -141,8 +129,7 @@ join(res.keyCommands, {
 		{down = device_commands.SelectMode, cockpit_device_id = devices.ASN128B, value_down = 0.02, name = _('AN/ASN-128B Select Mode 3 TEST'), category = _('AN/ASN-128B GPS DPLR')},
 		{down = device_commands.SelectMode, cockpit_device_id = devices.ASN128B, value_down = 0.03, name = _('AN/ASN-128B Select Mode 4 MGRS'), category = _('AN/ASN-128B GPS DPLR')},
 		{down = device_commands.SelectMode, cockpit_device_id = devices.ASN128B, value_down = 0.04, name = _('AN/ASN-128B Select Mode 5 LAT/LONG'), category = _('AN/ASN-128B GPS DPLR')},
-		{down = device_commands.SelectMode, cockpit_device_id = devices.ASN128B, value_down = 0.05, name = _('AN/ASN-128B Select Mode 6 GPS LDG'), category = _('AN/ASN-128B GPS DPLR')},
-	
+		{down = device_commands.SelectMode, cockpit_device_id = devices.ASN128B, value_down = 0.05, name = _('AN/ASN-128B Select Mode 6 GPS LDG'), category = _('AN/ASN-128B GPS DPLR')},	
 	
 		-- Pilot ICP Selector
 		{down = device_commands.pilotICPToggleFM1, cockpit_device_id = devices.PLT_ICP, value_down = 1.0, name = _('ICP Pilot FM1 - ON'), category = _('ICP')},
@@ -261,8 +248,7 @@ join(res.keyCommands, {
 		{down = device_commands.PilotBRG2Toggle, up = device_commands.PilotBRG2Toggle, cockpit_device_id = devices.PLTCISP, value_down = 1.0, value_up = 0.0, name = _('CISP BRG2 Pilot - VOR else ADF'), category = _('CISP')},
 		{down = device_commands.PilotBRG2Toggle, up = device_commands.PilotBRG2Toggle, cockpit_device_id = devices.PLTCISP, value_down = 0.0, value_up = 1.0, name = _('CISP BRG2 Pilot - ADF else VOR'), category = _('CISP')},
 		{down = device_commands.PilotBRG2Toggle, cockpit_device_id = devices.PLTCISP, value_down = 0.0, name = _('CISP BRG2 Pilot - ADF'), category = _('CISP')},
-		{down = device_commands.PilotBRG2Toggle, cockpit_device_id = devices.PLTCISP, value_down = 1.0, name = _('CISP BRG2 Pilot - VOR'), category = _('CISP')},
-		
+		{down = device_commands.PilotBRG2Toggle, cockpit_device_id = devices.PLTCISP, value_down = 1.0, name = _('CISP BRG2 Pilot - VOR'), category = _('CISP')},		
         
 		--Copilot CIS
 		{down = device_commands.CopilotNavGPSToggle, up = device_commands.CopilotNavGPSToggle, cockpit_device_id = devices.CPLTCISP, value_down = 1.0, value_up = 0.0, name = _('CIS NAV GPS Copilot - ON else OFF'), category = _('CISP')},
@@ -307,6 +293,36 @@ join(res.keyCommands, {
         -- Electrical Systems
         {down = Keys.BattSwitch, name = _('Battery Switch'), category = _('Electrical Systems')},
         {down = Keys.ExtPwrSwitch, name = _('External Power Switch'), category = _('Electrical Systems')},
+		
+		{down = EFM_commands.switchAPU, cockpit_device_id = devices.EFM_HELPER, value_down = 1.0, name = _('APU Control Switch - ON'), category = _('Electrical Systems')},
+		{down = EFM_commands.switchAPU, cockpit_device_id = devices.EFM_HELPER, value_down = 0.0, name = _('APU Control Switch - OFF'), category = _('Electrical Systems')},
+	
+		{down = EFM_commands.apuGenSwitch2, cockpit_device_id = devices.EFM_HELPER, value_down = 1.0, name = _('APU GEN Switch - ON'), category = _('Electrical Systems')},
+		{down = EFM_commands.apuGenSwitch2, cockpit_device_id = devices.EFM_HELPER, value_down = 0.0, name = _('APU GEN Switch - OFF'), category = _('Electrical Systems')},
+		{down = EFM_commands.apuGenSwitch2, up = EFM_commands.apuGenSwitch2, cockpit_device_id = devices.EFM_HELPER, value_down = 0.0, value_up = 1.0, name = _('APU GEN Switch - OFF else ON'), category = _('Electrical Systems')},
+		{down = EFM_commands.apuGenSwitch2, up = EFM_commands.apuGenSwitch2, cockpit_device_id = devices.EFM_HELPER, value_down = 1.0, value_up = 0.0, name = _('APU GEN Switch - ON else OFF'), category = _('Electrical Systems')},
+		
+		{down = EFM_commands.gen1Switch2, cockpit_device_id = devices.EFM_HELPER, value_down = 1.0, name = _('GEN 1 Switch - ON'), category = _('Electrical Systems')},
+		{down = EFM_commands.gen1Switch2, cockpit_device_id = devices.EFM_HELPER, value_down = 0.0, name = _('GEN 1 Switch - OFF'), category = _('Electrical Systems')},
+		{down = EFM_commands.gen1Switch2, up = EFM_commands.gen1Switch2, cockpit_device_id = devices.EFM_HELPER, value_down = 0.0, value_up = 1.0, name = _('GEN 1 Switch - OFF else ON'), category = _('Electrical Systems')},
+		{down = EFM_commands.gen1Switch2, up = EFM_commands.gen1Switch2, cockpit_device_id = devices.EFM_HELPER, value_down = 1.0, value_up = 0.0, name = _('GEN 1 Switch - ON else OFF'), category = _('Electrical Systems')},
+		
+		{down = EFM_commands.gen2Switch2, cockpit_device_id = devices.EFM_HELPER, value_down = 1.0, name = _('GEN 2 Switch - ON'), category = _('Electrical Systems')},
+		{down = EFM_commands.gen2Switch2, cockpit_device_id = devices.EFM_HELPER, value_down = 0.0, name = _('GEN 2 Switch - OFF'), category = _('Electrical Systems')},
+		{down = EFM_commands.gen2Switch2, up = EFM_commands.gen2Switch2, cockpit_device_id = devices.EFM_HELPER, value_down = 0.0, value_up = 1.0, name = _('GEN 2 Switch - OFF else ON'), category = _('Electrical Systems')},
+		{down = EFM_commands.gen2Switch2, up = EFM_commands.gen2Switch2, cockpit_device_id = devices.EFM_HELPER, value_down = 1.0, value_up = 0.0, name = _('GEN 2 Switch - ON else OFF'), category = _('Electrical Systems')},
+		
+		{down = EFM_commands.extPwrSwitch2, cockpit_device_id = devices.EFM_HELPER, value_down = 1.0, name = _('External Power Switch - ON'), category = _('Electrical Systems')},
+		{down = EFM_commands.extPwrSwitch2, cockpit_device_id = devices.EFM_HELPER, value_down = 0.0, name = _('External Power Switch - OFF'), category = _('Electrical Systems')},
+		{down = EFM_commands.extPwrSwitch2, up = EFM_commands.extPwrSwitch2, cockpit_device_id = devices.EFM_HELPER, value_down = 0.0, value_up = 1.0, name = _('External Power Switch - OFF else ON'), category = _('Electrical Systems')},
+		{down = EFM_commands.extPwrSwitch2, up = EFM_commands.extPwrSwitch2, cockpit_device_id = devices.EFM_HELPER, value_down = 1.0, value_up = 0.0, name = _('External Power Switch - ON else OFF'), category = _('Electrical Systems')},
+	
+		-- Instruments
+		{down = device_commands.apn209PilotLoSet, cockpit_device_id = devices.PLTAPN209, value_down = 5.0, name = _('Radar Altimeter Lo Bug Pilot - Increase Slightly'), category = _('Instruments')},
+		{down = device_commands.apn209PilotLoSet, cockpit_device_id = devices.PLTAPN209, value_down = -2.0, name = _('Radar Altimeter Lo Bug Pilot - Decrease Slightly'), category = _('Instruments')},	
+		{down = device_commands.apn209PilotHiSet, cockpit_device_id = devices.PLTAPN209, value_down = 5.0, name = _('Radar Altimeter Hi Bug Pilot - Increase Slightly'), category = _('Instruments')},
+		{down = device_commands.apn209PilotHiSet, cockpit_device_id = devices.PLTAPN209, value_down = -2.0, name = _('Radar Altimeter Hi Bug Pilot - Decrease Slightly'), category = _('Instruments')},
+
 
         -- Cyclic
         {pressed = EFM_commands.trimUp, name = _('Cyclic Trim Nose Up'), category = _('Cyclic')},
