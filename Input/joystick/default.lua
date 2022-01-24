@@ -16,7 +16,7 @@ join(res.keyCommands, {
         invertY = false,
     },
 ]]
-	--Baileys UH60L Binds 2022JAN23
+	--Baileys UH60L Binds 2022JAN24
 	
 		-- AFCS FPS
 		{down = device_commands.afcsFPS, up = device_commands.afcsFPS, cockpit_device_id = devices.AFCS, value_down = 1.0, value_up = 0.0, name = _('AFCS FPS - ON else OFF'), category = _('AFCS')},
@@ -348,6 +348,11 @@ join(res.keyCommands, {
         {down = Keys.avs7Toggle, 	name = _('AN/AVS-7 ON/OFF'),	category = _('AN/AVS-7 HUD')},
         {pressed = Keys.avs7Brighten, 	name = _('AN/AVS-7 Brighten'),	category = _('AN/AVS-7 HUD')},
         {pressed = Keys.avs7Dim, 	name = _('AN/AVS-7 Dim'),	category = _('AN/AVS-7 HUD')},
+		{down = device_commands.setAVS7Power, cockpit_device_id = devices.AVS7, value_down = 1.0, name = _('AN/AVS-7 ADJ'),	category = _('AN/AVS-7 HUD')},
+		{down = device_commands.setAVS7Power, cockpit_device_id = devices.AVS7, value_down = 0.0, name = _('AN/AVS-7 ON'),	category = _('AN/AVS-7 HUD')},
+		{down = device_commands.setAVS7Power, cockpit_device_id = devices.AVS7, value_down = -1.0, name = _('AN/AVS-7 OFF'),	category = _('AN/AVS-7 HUD')},
+		{down = device_commands.setAVS7Power, up = device_commands.setAVS7Power, cockpit_device_id = devices.AVS7, value_down = 0.0, value_up = -1.0, name = _('AN/AVS-7 ON else OFF'),	category = _('AN/AVS-7 HUD')},
+		{down = device_commands.setAVS7Power, up = device_commands.setAVS7Power, cockpit_device_id = devices.AVS7, value_down = -1.0, value_up = 0.0, name = _('AN/AVS-7 OFF else ON'),	category = _('AN/AVS-7 HUD')},
 
         -- Lighting
         {down = Keys.landingLightToggle, 	name = _('Landing Light ON/OFF'),	category = _('Lighting')},
